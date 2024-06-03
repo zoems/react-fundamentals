@@ -9,13 +9,17 @@
 
   <script type="module">
 
+    const heading = React.createElement('h1', {children: "Hello World", className: 'anotherway'} )
+    const explanation = React.createElement('span', null, 'You can either include children in element props of you can add them after as extra props')
+
     //creating the element
     const elementProps = {
       id: 'textcontent',
-      className: 'Container' ,
-      children: 'Hello World',
+      className: 'container' ,
+      children: [heading, explanation]
     }
-    const elementType = 'h1'
+
+    const elementType = 'div'
 
     const reactElement = React.createElement(elementType, elementProps)
     console.log(reactElement)
